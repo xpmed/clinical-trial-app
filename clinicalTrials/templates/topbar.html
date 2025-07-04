@@ -1,0 +1,18 @@
+{% load i18n %}
+<nav class="navbar navbar-expand navbar-light bg-light mb-4">
+    <div class="container-fluid">
+        <span class="navbar-brand mb-0 h5">{% block page_title %}{% trans "Panel główny" %}{% endblock %}</span>
+
+        <ul class="navbar-nav ms-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="userDropdown" data-bs-toggle="dropdown">
+                    <i class="bi bi-person-circle"></i> {{ request.user.username }}
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a class="dropdown-item" href="#">{% trans "Profil" %}</a></li>
+                    <li><a class="dropdown-item" href="">{% trans "Wyloguj się" %}</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>

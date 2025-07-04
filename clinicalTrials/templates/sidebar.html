@@ -1,0 +1,26 @@
+{% load i18n %}
+<div class="sidebar d-flex flex-column p-3" style="background-color: #1a3f5c; height: 100vh; width: 240px;">
+    <h4 class="mb-4 text-white">{% trans "Aplikacja kliniczna" %}</h4>
+    <ul class="nav nav-pills flex-column mb-auto">
+        <li class="nav-item">
+            <a href="/" class="nav-link text-white">
+                <i class="bi bi-house-door"></i> {% trans "Panel główny" %}
+            </a>
+        </li>
+        <li>
+            <a href="/patients/" class="nav-link text-white">
+                <i class="bi bi-person-vcard"></i> {% trans "Pacjenci" %}
+            </a>
+        </li>
+        <li>
+            <a href="/reports/" class="nav-link text-white">
+                <i class="bi bi-file-earmark-text"></i> {% trans "Raporty" %}
+            </a>
+        </li>
+        <li>
+            <a href="/settings/" class="nav-link text-white">
+                <i class="bi bi-gear"></i> {% trans "Ustawienia" %}
+            </a>
+        </li>
+    </ul>
+</div>

@@ -1,0 +1,31 @@
+{% extends "auth/base_auth.html" %}
+{% load i18n widget_tweaks %}
+
+{% block title %}{% trans "Logowanie" %}{% endblock %}
+
+{% block content %}
+<div class="card shadow p-4" style="width:420px;max-width:100%;">
+  <h3 class="mb-4 text-center">{% trans "Logowanie" %}</h3>
+
+  <form method="post" novalidate>
+    {% csrf_token %}
+    {{ form.non_field_errors }}
+
+    <div class="mb-3">
+      {{ form.username.label_tag }}
+      {{ form.username|add_class:"form-control" }}
+    </div>
+
+    <div class="mb-4">
+      {{ form.password.label_tag }}
+      {{ form.password|add_class:"form-control" }}
+    </div>
+
+    <button class="btn btn-primary w-100">{% trans "Zaloguj" %}</button>
+  </form>
+
+  <div class="text-center mt-3">
+    <a href="{% url 'password_reset' %}">{% trans "Nie pamiętasz hasła?" %}</a>
+  </div>
+</div>
+{% endblock %}
