@@ -1,0 +1,11 @@
+DEBUG: true
+
+SECRET_KEY: ""
+
+DATABASE:
+  ENGINE: 'django.db.backends.postgresql'
+  NAME: ''
+  USER: ''
+  PASSWORD: ''
+  HOST: ''
+  PORT: ''
