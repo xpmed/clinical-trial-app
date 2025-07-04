@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+
+# Django
+db.sqlite3
+*.sqlite3
+/media/
+staticfiles/
+.env
+.env.*
+
+# VSCode
+.vscode/
+
+# System
+.DS_Store
+Thumbs.db
+
+# Migrations
+*/migrations/
+!*/migrations/__init__.py
+
+# Logs
+*.log
+
+# Test
+htmlcov/
+.coverage
+.tox/
+.nox/
+.cache/
+.pytest_cache/
